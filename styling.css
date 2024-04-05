@@ -1,0 +1,183 @@
+
+/*
+    © Joey Smalen. All rights reserved.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #010510;
+    color: #fff;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    height: calc(100% + (var(--safe-area-inset-top) + var(--safe-area-inset-bottom)));
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+}
+
+/* Layout */
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh;
+    overflow: hidden;
+}
+
+main img {
+    width: 75%;
+}
+
+.content {
+    width: 400px;
+}
+
+.two-column {
+    position: inline;
+}
+
+.two-column > * {
+    float: left;
+}
+
+.boxed {
+    background: #010510;
+    border-radius: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    opacity: 0.5;
+}
+
+footer {
+    overflow: hidden;
+}
+
+footer > * {
+    bottom: 0;
+    font-size: 90%;
+    margin: 10px 20px;
+    position: absolute;
+}
+
+footer > *:last-child {
+    right: 0;
+}
+
+/* Style: basic */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: ease-in 70ms;
+}
+
+a:hover {
+    color: #fff;
+    font-weight: 750 !important;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+.content-center {
+    text-align: center;
+}
+
+.content-left {
+    text-align: left;
+}
+
+/* Style: headline */
+.text-headline {
+    color: rgb(225, 228, 229);
+    font-size: 6.5em;
+    font-weight: 900;
+}
+
+.text-headline-2 {
+    color: rgb(225, 228, 229);
+    font-size: 4.4em;
+    font-weight: 750;
+}
+
+.text-subheadline {
+    color: rgb(116, 124, 128);
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.text-subtext {
+    color: rgb(100, 105, 116);
+}
+
+.text-body {
+    padding-top: 24px;
+}
+
+/* Style: masks */
+.mask-36 {
+    border-radius: 36%;
+}
+
+/* Style: footer entities */
+.entity {
+    font-weight: 300;
+}
+
+.entity-bold {
+    font-weight: 475;
+}
+
+/* Style: background */
+
+#background {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    z-index: -10;
+}
+
+/* Responsive */
+@media screen and (max-width: 800px) {
+    .content {
+        width: 100%;
+    }
+
+    .text-headline,
+    .text-headline-2,
+    .text-subheadline,
+    .text-subtext,
+    .text-body {
+        padding-left: 9vh;
+        padding-right: 9vh;
+    }
+
+    main {
+        min-height: 80vh;
+    }
+
+    main img {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .content {
+        font-size: 80%;
+        padding: 2.5vh;
+    }
+
+    footer > *:last-child {
+        float: none;
+        text-align: right;
+    }
+}
