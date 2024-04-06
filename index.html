@@ -16,40 +16,35 @@
 
 	<link href="./styling.css" rel="stylesheet" type="text/css"/>
 
-	<meta property="title" 		 content="QSmally - Joey Smalen"/>
+	<meta property="title" 		 content="Cinematography - Joey Smalen"/>
 	<meta property="description" content="Smally's aerial videography page"/>
 	<meta name="keywords" 	     content="qsmally, joey, smalen"/>
     <meta name="author" 		 content="© Joey Smalen"/>
 </head>
 <body>
 
-<!-- Page content -->
-<video autoplay muted loop id="background">
+<!-- Page background -->
+<video autoplay muted loop class="background">
     <source src="content/sunset.mp4" type="video/mp4">
 </video>
 
+<!-- Page content -->
 <main>
-    <div class="two-column boxed">
-        <div class="content content-center">
-            <img class="mask-36" src="./profile.png" alt="Q">
+    <div>
+        <div class="text-headline-2">Services for</div>
+        <div class="text-headline">aerial videography</div>
+
+        <div class="text-subheadline">
+            <a href="/contact">Commissions available</a>
+            <small>&rarr;</small>
         </div>
 
-        <div class="content content-left">
-            <div class="text-headline">Joey Smalen</div>
-
-            <div class="text-subheadline">
-                <a href="/contact">Commissions available</a>
-                <small>&rarr;</small>
-            </div>
-        </div>
+        <div class="text-subtext">Joey Smalen</div>
     </div>
 </main>
 
 <!-- Footer -->
 <footer>
-    <!-- left side empty -->
-    <div></div>
-
     <div>
         <div class="entity-bold">
             &copy; <span id="year"></span> Joey Smalen
@@ -60,7 +55,7 @@
 <!-- Dynamic year -->
 <script>
     document.getElementById("year").innerText = new Date().getFullYear();
-    document.getElementById("background").playbackRate = 1.75;
+    document.getElementById("background").playbackRate = 1.85;
 </script>
 
 </body>

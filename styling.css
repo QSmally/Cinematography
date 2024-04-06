@@ -4,6 +4,7 @@
 */
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -23,36 +24,28 @@ body {
 
 /* Layout */
 main {
-    align-items: center;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2em;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 90vh;
-    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
 }
 
 main img {
-    width: 75%;
+    opacity: 0.25;
+    width: 25%;
 }
 
-.content {
-    width: 400px;
-}
-
-.two-column {
-    position: inline;
-}
-
-.two-column > * {
-    float: left;
-}
-
-.boxed {
-    background: #010510;
-    border-radius: 16px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    opacity: 0.5;
+.background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.55;
 }
 
 footer {
@@ -86,35 +79,29 @@ b, strong {
     font-weight: 600;
 }
 
-.content-center {
-    text-align: center;
-}
-
-.content-left {
-    text-align: left;
-}
-
 /* Style: headline */
 .text-headline {
     color: rgb(225, 228, 229);
-    font-size: 6.5em;
-    font-weight: 900;
+    font-size: 4.4em;
+    font-weight: 850;
 }
 
 .text-headline-2 {
     color: rgb(225, 228, 229);
-    font-size: 4.4em;
+    font-size: 3.5em;
     font-weight: 750;
 }
 
 .text-subheadline {
-    color: rgb(116, 124, 128);
+    /* color: rgb(116, 124, 128); */
+    color: rgb(200, 200, 230);
     font-size: 1.6em;
     font-weight: 500;
 }
 
 .text-subtext {
-    color: rgb(100, 105, 116);
+    /* color: rgb(100, 105, 116); */
+    color: rgb(200, 200, 230);
 }
 
 .text-body {
@@ -135,20 +122,9 @@ b, strong {
     font-weight: 475;
 }
 
-/* Style: background */
-
-#background {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    min-width: 100%;
-    z-index: -10;
-}
-
 /* Responsive */
 @media screen and (max-width: 800px) {
-    .content {
+    main {
         width: 100%;
     }
 
@@ -171,7 +147,7 @@ b, strong {
 }
 
 @media screen and (max-width: 425px) {
-    .content {
+    main {
         font-size: 80%;
         padding: 2.5vh;
     }
