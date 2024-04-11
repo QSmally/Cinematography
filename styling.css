@@ -48,6 +48,42 @@ main img {
     opacity: 0.55;
 }
 
+.mask {
+    position: absolute;
+    height: 170px;
+    width: 100%;
+    padding-top: 16px;
+    background: #010510;
+    bottom: -100px;
+    border-radius: 50%;
+}
+
+.expand-page {
+    position: relative;
+    bottom: -100vh;
+    width: 100%;
+}
+
+.expand-page > * {
+    position: relative;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 4em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row > * {
+    margin: 26px;
+    width: 50%;
+}
+
+.row video, img {
+    width: 100%;
+    border-radius: 24px;
+}
+
 footer {
     overflow: hidden;
 }
@@ -93,19 +129,34 @@ b, strong {
 }
 
 .text-subheadline {
-    /* color: rgb(116, 124, 128); */
     color: rgb(200, 200, 230);
     font-size: 1.6em;
     font-weight: 500;
 }
 
 .text-subtext {
-    /* color: rgb(100, 105, 116); */
     color: rgb(200, 200, 230);
 }
 
 .text-body {
     padding-top: 24px;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-center {
+    color: #fff;
+    text-align: center;
+}
+
+.text-three-fourth {
+    width: 75%;
+}
+
+.margin-under {
+    margin-bottom: 1em;
 }
 
 /* Style: masks */
@@ -133,8 +184,27 @@ b, strong {
     .text-subheadline,
     .text-subtext,
     .text-body {
-        padding-left: 9vh;
-        padding-right: 9vh;
+        padding-left: 6vh;
+        padding-right: 6vh;
+    }
+
+    .expand-page > * {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row > * {
+        margin: 20px;
+        width: 85%;
+    }
+
+    .row .text-headline-2 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .text-three-fourth {
+        width: 100%;
     }
 
     main {
@@ -147,6 +217,11 @@ b, strong {
 }
 
 @media screen and (max-width: 425px) {
+    .row > * {
+        margin: 10px;
+        width: 95%;
+    }
+
     main {
         font-size: 80%;
         padding: 2.5vh;
