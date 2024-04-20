@@ -12,6 +12,7 @@
 html {
     background: #010510;
     color: #fff;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -32,11 +33,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-main img {
-    opacity: 0.25;
-    width: 25%;
 }
 
 .background {
@@ -64,24 +60,31 @@ main img {
     width: 100%;
 }
 
-.expand-page > * {
+.expand-page {
     position: relative;
     left: 0;
     width: 100%;
+    padding-top: 7.5em;
+    padding-left: 18vw;
+    padding-right: 18vw;
+}
+
+.container {
+    width: 100%;
+}
+
+.container video, img {
+    max-width: 100%;
+}
+
+.two-side {
     display: flex;
-    padding: 4em;
     justify-content: space-between;
     align-items: center;
 }
 
-.row > * {
-    margin: 26px;
-    width: 50%;
-}
-
-.row video, img {
-    width: 100%;
-    border-radius: 24px;
+.two-side > * {
+    max-width: 40%;
 }
 
 footer {
@@ -151,68 +154,55 @@ b, strong {
     text-align: center;
 }
 
-.text-three-fourth {
-    width: 75%;
+.margin-under-4 {
+    margin-bottom: 4em;
 }
 
-.margin-under {
-    margin-bottom: 1em;
+.margin-under-9 {
+    margin-bottom: 9em;
 }
 
 /* Style: masks */
-.mask-36 {
-    border-radius: 36%;
+.mask-24 {
+    border-radius: 24px;
 }
 
 /* Style: footer entities */
-.entity {
-    font-weight: 300;
-}
-
 .entity-bold {
     font-weight: 475;
 }
 
 /* Responsive */
-@media screen and (max-width: 1100px) {
-    .expand-page > * {
+@media screen and (max-width: 800px) {
+    main {
+        width: 100%;
+        min-height: 80vh;
+    }
+
+    .expand-page {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+
+    .two-side {
         flex-direction: column;
         align-items: center;
     }
 
-    .row > * {
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    main {
-        width: 100%;
+    .two-side > * {
+        max-width: 100%;
     }
 
-    .row > * {
-        width: 100%;
+    .margin-under-4 {
+        margin-bottom: 2em;
     }
 
-    .text-three-fourth {
-        width: 100%;
-    }
-
-    main {
-        min-height: 80vh;
-    }
-
-    main img {
-        width: 35%;
+    .margin-under-9 {
+        margin-bottom: 4em;
     }
 }
 
 @media screen and (max-width: 425px) {
-    .row > * {
-        margin: 10px;
-        width: 95%;
-    }
-
     main {
         font-size: 80%;
         padding: 2.5vh;
